@@ -1,0 +1,21 @@
+﻿@model Kokedamas_e_TuperWares.Models.Modelo
+@{
+    ViewBag.Title = "Modelo Cadastro";
+}
+
+<h2>Modelo Cadastrar</h2>
+
+
+@using (Html.BeginForm("ModeloCadastro", "Modelo"))
+
+{
+    <div class="form-group">
+        @Html.LabelFor(obj => obj.Modelos)
+        @Html.TextBoxFor(obj => obj.Modelos, new { @class = "form-control" })
+
+    </div>
+
+    <div>
+        <input type="submit" value="salvar" class="btn" />
+    </div>
+}

@@ -1,0 +1,28 @@
+﻿@model Kokedamas_e_TuperWares.Models.Kokedama
+
+@{
+    ViewBag.Title = "FormularioCadastro";
+}
+
+<h2>FormularioCadastro</h2>
+
+
+@using (Html.BeginForm("FormularioCadastro", "Home"))
+
+{
+    <div class="form-group">
+        @Html.LabelFor(obj => obj.nome)
+        @Html.TextBoxFor(obj => obj.nome, new { @class = "form-control" })
+
+        @*@Html.LabelFor(obj => obj.tipo)
+        @Html.TextBoxFor(obj => obj.tipo, new { @class = "form-control" })*@
+
+        @Html.LabelFor(obj => obj.tamanho)
+        @Html.TextBoxFor(obj => obj.tamanho, new { @class = "form-control" })
+
+    </div>
+
+    <div>
+        <input type="submit" value="salvar" class="btn" />
+    </div>
+}

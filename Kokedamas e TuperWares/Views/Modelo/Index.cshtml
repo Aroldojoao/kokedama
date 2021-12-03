@@ -1,0 +1,44 @@
+﻿@model List<Kokedamas_e_TuperWares.Models.Modelo>
+
+@{ ViewBag.Title = "Loja de Kokedamas"; }
+
+<div>
+
+    @Html.ActionLink("Consulta Modelo", "ModeloCadastro", "Modelo")
+
+
+</div>
+
+<div>
+
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>Modelos</th>
+
+        </tr>
+        @foreach (var item in Model)
+
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.Modelos</td>
+
+            </tr>
+
+
+
+        }
+    </table>
+
+
+
+
+
+</div>
+
+
+
+
+
+
